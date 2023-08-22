@@ -5,6 +5,7 @@ import org.oorsprong.websamples.TCurrency;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.soap.example.service.CountryService;
@@ -22,13 +23,13 @@ public class CountyController {
 	}
 
 	@GetMapping("/capitalCity")
-	public String getCapitalCity() {
-		return service.getCapitalCity();
+	public String getCapitalCity(@RequestParam String country) {
+		return service.getCapitalCity(country);
 	}
 
 	@GetMapping("/currency")
-	public TCurrency getCountryCurency() {
-		return service.getCurrency();
+	public TCurrency getCountryCurency(@RequestParam String country) {
+		return service.getCurrency(country);
 	}
 
 }

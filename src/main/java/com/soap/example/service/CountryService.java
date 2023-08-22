@@ -6,9 +6,9 @@ import org.oorsprong.websamples_countryinfo.CountryInfoService;
 
 public interface CountryService {
 	
-	public String getCapitalCity();
+	public String getCapitalCity(String country);
 
-	public TCurrency getCurrency();
+	public TCurrency getCurrency(String country);
 
 	public ArrayOftCountryCodeAndName getCountries();
 

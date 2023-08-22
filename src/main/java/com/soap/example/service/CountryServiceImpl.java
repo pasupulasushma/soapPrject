@@ -12,18 +12,18 @@ public class CountryServiceImpl implements CountryService {
 	
 
 	@Override
-	public String getCapitalCity() {
+	public String getCapitalCity(String country) {
 		// TODO Auto-generated method stub
 		 CountryInfoService countryInfoService = new CountryInfoService();
 		    CountryInfoServiceSoapType countryInfoServiceSoapType = countryInfoService.getCountryInfoServiceSoap();
-		    return countryInfoServiceSoapType.capitalCity("RUS");
+		    return countryInfoServiceSoapType.capitalCity(country);
 	}
 
 	@Override
-	public TCurrency getCurrency() {
+	public TCurrency getCurrency(String country) {
 		 CountryInfoService countryInfoService = new CountryInfoService();
 	    CountryInfoServiceSoapType countryInfoServiceSoapType = countryInfoService.getCountryInfoServiceSoap();
-	    return countryInfoServiceSoapType.countryCurrency("IN");
+	    return countryInfoServiceSoapType.countryCurrency(country);
 	}
 
 	@Override
